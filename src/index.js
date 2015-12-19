@@ -39,9 +39,10 @@ function tileReduce(options) {
   log('Starting up ' + maxWorkers + ' workers... ');
 
   if (output) output.setMaxListeners(0);
+  var mapOptions = options.mapOptions || {};
 
   for (var i = 0; i < maxWorkers; i++) {
-    var workerArgs = [options.map, JSON.stringify(options.sources)];
+    var workerArgs = [options.map, JSON.stringify(options.sources), JSON.stringify(mapOptions)];
     var worker;
     if (options.workerCommand) worker = child_process.spawn(options.workerCommand, workerArgs, {
       stdio: ['pipe', 'pipe', 'pipe', 'ipc']

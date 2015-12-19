@@ -1,6 +1,6 @@
 {
   "name": "tile-reduce",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "vector tile mapreduce",
   "main": "src/index.js",
   "directories": {
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/mapbox/tile-reduce.git"
   },
-  "author": "",
+  "author": "morganherlocker",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mapbox/tile-reduce/issues"
